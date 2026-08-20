@@ -1,5 +1,7 @@
 # TheDojo
 
+*Where knowledge is shared.*
+
 **Proven AI skills for any operator.** TheDojo is the public home for skills forged and tested in a private OS, then sanitized and released with binary acceptance tests.
 
 OurDojo (private) = forge. **TheDojo (this repo) = publish.**
