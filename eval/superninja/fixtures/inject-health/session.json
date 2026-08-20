@@ -1,0 +1,16 @@
+{
+  "schema": "thedojo.superninja.session-scan.v1",
+  "source_root": "inject-health",
+  "scanned_at": "2026-08-18T00:00:00.000Z",
+  "files_scanned": 0,
+  "files_skipped": 0,
+  "lines_skipped": 0,
+  "token_status": "unavailable",
+  "tokens": null,
+  "tool_calls": 0,
+  "findings": [],
+  "could_not_verify": [],
+  "status": "recommend_only",
+  "duration_ms": 1,
+  "health_score": 87
+}

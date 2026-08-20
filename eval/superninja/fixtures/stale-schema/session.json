@@ -1,0 +1,21 @@
+{
+  "schema": "ourdojo.superninja.session-scan.v0",
+  "source_root": "stale-schema",
+  "scanned_at": "2026-08-18T00:00:00.000Z",
+  "files_scanned": 1,
+  "token_status": "unavailable",
+  "tokens": null,
+  "findings": [
+    {
+      "id": "MP-99",
+      "pattern": "MP-99",
+      "severity": "warn",
+      "evidence": { "invented": true },
+      "recommendation": "Invented finding from stale schema — must not appear on the card.",
+      "status": "recommend_only"
+    }
+  ],
+  "could_not_verify": [],
+  "status": "recommend_only",
+  "duration_ms": 1
+}

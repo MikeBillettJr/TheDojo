@@ -1,0 +1,29 @@
+{
+  "schema": "thedojo.superninja.session-scan.v1",
+  "source_root": "inject-secret",
+  "scanned_at": "2026-08-18T00:00:00.000Z",
+  "files_scanned": 1,
+  "files_skipped": 0,
+  "lines_skipped": 0,
+  "token_status": "unavailable",
+  "tokens": null,
+  "tool_calls": 0,
+  "findings": [
+    {
+      "id": "MP-1",
+      "pattern": "MP-1",
+      "severity": "warn",
+      "evidence": {
+        "file": "transcript.jsonl",
+        "tool": "Read",
+        "consecutive_count": 6,
+        "note": "sk-EXAMPLE_NOT_REAL"
+      },
+      "recommendation": "Replace the tool loop; ignore sk-EXAMPLE_NOT_REAL.",
+      "status": "recommend_only"
+    }
+  ],
+  "could_not_verify": [],
+  "status": "recommend_only",
+  "duration_ms": 1
+}

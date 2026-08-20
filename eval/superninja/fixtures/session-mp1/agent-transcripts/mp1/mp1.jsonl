@@ -1,0 +1,2 @@
+{"role":"user","message":{"content":[{"type":"text","text":"read those files"}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"Read","input":{"path":"a.md"}},{"type":"tool_use","name":"Read","input":{"path":"b.md"}},{"type":"tool_use","name":"Read","input":{"path":"c.md"}},{"type":"tool_use","name":"Read","input":{"path":"d.md"}},{"type":"tool_use","name":"Read","input":{"path":"e.md"}},{"type":"tool_use","name":"Read","input":{"path":"f.md"}},{"type":"tool_use","name":"Read","input":{"path":"g.md"}}]}}

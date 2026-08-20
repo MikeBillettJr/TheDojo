@@ -1,0 +1,2 @@
+{"role":"user","message":{"content":[{"type":"text","text":"here is a fake key sk-EXAMPLE_NOT_REAL and ghp_EXAMPLE_NOT_REAL for redact tests"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"I will not store sk-EXAMPLE_NOT_REAL or ghp_EXAMPLE_NOT_REAL."}]}}
