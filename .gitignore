@@ -1,2 +1,4 @@
 eval/superninja/results/
+eval/operator-profile/results/
+eval/memory-loop/results/
 *.log

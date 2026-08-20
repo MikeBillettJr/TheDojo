@@ -11,15 +11,29 @@ Thank you for helping ship **proven** agent skills.
 
 ## Skill structure
 
-Mirror `skills/superninja/`:
+Mirror the core trio:
+
+| Skill | Folder | Scripts |
+|-------|--------|---------|
+| operator-profile | `skills/operator-profile/` | `lint-profile.js`, `run-acceptance.js` |
+| memory-loop | `skills/memory-loop/` | `lint-memory.js`, `run-acceptance.js` |
+| superninja | `skills/superninja/` | scanners + `run-acceptance.js` |
 
 ```
 skills/<kebab-name>/
   SKILL.md           # contract (~200 lines max)
-  PORTABLE.md        # optional: non-Cursor install
+  PORTABLE.md        # non-Cursor install
   references/        # lazy-loaded depth
-  scripts/           # optional Node helpers (no npm deps preferred)
+  scripts/           # Node helpers (no npm deps preferred)
 ```
+
+## Required updates when adding a skill
+
+1. `README.md` — skills table + verify command
+2. `docs/LAYOUT.md` — if layout changes
+3. `eval/cases/HARD-cases.md` — mention skill folder
+4. `scripts/verify-os.js` — register acceptance suite
+5. Run `node scripts/verify-os.js` before PR
 
 ## Quality bar
 
