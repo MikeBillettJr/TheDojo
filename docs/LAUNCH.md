@@ -1,6 +1,10 @@
 # AI OS launch guide
 
-Day zero → week one. Complete steps in order.
+Everyone’s curious. This is **where to actually start** — then how to **get good**.
+
+Day zero → week one. Complete steps in order. If you only have an hour, finish Step 0 and Step 1. If you have a week, you will have a practice, not a demo.
+
+Full why: [PURPOSE.md](PURPOSE.md).
 
 ## Prerequisites
 

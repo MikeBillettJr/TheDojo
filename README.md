@@ -2,76 +2,80 @@
 
 *Where knowledge is shared.*
 
-**The proven starter kit for a personal AI OS** — personalize, persist, and continuously improve any agent on Cursor, Claude Code, or generic chat.
+Everyone’s curious about AI.  
+Most have zero idea where to actually start.  
+Even fewer know how to get good at it.
 
-Private forge → public publish. Skills are contracts with binary acceptance tests, not prompt dumps.
+**TheDojo exists to bridge that gap** — a proven personal AI OS you can start in an hour, then actually get better at using.
+
+Not prompt dumps. Contracts, memory files, and tests that run on any model that can read a folder — Windows or Mac.
+
+**[Why this exists](docs/PURPOSE.md)** · **[Start here — launch guide](docs/LAUNCH.md)**
+
+```bash
+git clone https://github.com/BillettFamily/TheDojo.git
+cd TheDojo
+node scripts/verify-os.js
+```
+
+Then follow [docs/LAUNCH.md](docs/LAUNCH.md): copy templates → identity interview → wrap up every session → weekly improvement scan.
 
 ---
 
-## Start here
+## How you get from curious to good
 
-**[docs/LAUNCH.md](docs/LAUNCH.md)** — day-zero guide (copy templates → interview → wrap-up → weekly scan)
+| Stage | Skill | What changes |
+|-------|--------|----------------|
+| **Start** | [operator-profile](skills/operator-profile/) | The model knows how *you* work |
+| **Stay** | [memory-loop](skills/memory-loop/) | Session 2 continues; it does not reboot |
+| **Get good** | [superninja](skills/superninja/) | You find waste, apply one fix, measure |
 
-Verify everything:
+Personalize → persist → improve. Domain skills (email, resume, sales ops) come **after** this loop.
+
+Each skill has `PORTABLE.md` for Cursor, Claude Code, and plain chat.
+
+Verify one skill or the whole OS:
 
 ```bash
+node skills/operator-profile/scripts/run-acceptance.js
+node skills/memory-loop/scripts/run-acceptance.js
+node skills/superninja/scripts/run-acceptance.js
 node scripts/verify-os.js
 ```
 
 ---
 
-## Core skills (ship in this order)
-
-| # | Skill | Purpose | Verify |
-|---|-------|---------|--------|
-| 1 | [operator-profile](skills/operator-profile/) | Day-zero identity interview → `memory/PROFILE*` | `node skills/operator-profile/scripts/run-acceptance.js` |
-| 2 | [memory-loop](skills/memory-loop/) | WORKING + LESSONS + wrap-up ritual | `node skills/memory-loop/scripts/run-acceptance.js` |
-| 3 | [superninja](skills/superninja/) | MP/QP optimization investigator | `node skills/superninja/scripts/run-acceptance.js` |
-
-**Stack:** personalize → persist → optimize.
-
-Each skill includes `PORTABLE.md` for non-Cursor hosts.
-
----
-
-## Repository layout
+## Layout
 
 See **[docs/LAYOUT.md](docs/LAYOUT.md)**.
 
 ```
 TheDojo/
-  docs/LAUNCH.md          ← onboarding
+  docs/PURPOSE.md         ← why we exist (the gap)
+  docs/LAUNCH.md          ← day-zero onboarding
   templates/memory/       ← copy to memory/ on day 0
-  memory/                 ← your live state (+ optimization catalogs)
-  skills/                 ← operator-profile, memory-loop, superninja
-  AGENTS.md               ← public constitution
-  eval/                   ← HARD cases + per-skill fixtures
-  scripts/verify-os.js    ← all acceptance suites
+  memory/                 ← your live state (+ MP/QP catalogs)
+  skills/                 ← start / stay / get-good trio
+  AGENTS.md               ← constitution for the agent
+  eval/                   ← HARD cases + fixtures
+  scripts/verify-os.js    ← all suites
 ```
-
----
-
-## Also included
-
-- `memory/optimization/` — meta-patterns (MP) and quality-patterns (QP) catalogs
-- `eval/cases/` — lite HARD policy rails
-- `SANITIZATION.md` — export gate for maintainers
-- `CONTRIBUTING.md` — how to add skills without breaking layout
 
 ---
 
 ## Philosophy
 
-1. **Skills are contracts** — triggers, procedure, refusals.
-2. **Scripts beat loops** — lint and scan deterministically (MP-1).
-3. **Proven before published** — acceptance tests; no health scores or invented metrics.
-4. **Human gates** — draft ≠ send; recommend_only for optimization.
+1. **Bridge the gap** — start is a first hour; getting good is a loop.
+2. **Skills are contracts** — triggers, procedure, refusals.
+3. **Scripts beat loops** — lint and scan deterministically (MP-1).
+4. **Proven before published** — acceptance tests; no health scores or invented metrics.
+5. **Human gates** — draft ≠ send; recommend_only for optimization.
 
 ---
 
 ## Contributing
 
-Forge privately, sanitize, verify, PR. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Every new skill must help someone **start** or **get good**. Forge privately, sanitize, verify, PR. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SANITIZATION.md](SANITIZATION.md).
 
 ## License
 

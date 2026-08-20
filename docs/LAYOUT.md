@@ -7,6 +7,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 ├── README.md                     # Overview + link to launch guide
 ├── AGENTS.md                     # Agent constitution — adapt paths
 ├── docs/
+│   ├── PURPOSE.md                # Why TheDojo exists (the gap)
 │   ├── LAUNCH.md                 # Day-zero onboarding (start here)
 │   └── LAYOUT.md                 # This file
 ├── templates/memory/             # Starters — copy to memory/ once
@@ -46,4 +47,4 @@ TheDojo/                          # Your OS repo (clone or fork)
 2. `memory-loop` — continuity
 3. `superninja` — continuous improvement
 
-When adding a new skill: update `README.md`, `eval/cases/HARD-cases.md`, and run `verify-os.js`.
+When adding a new skill: update `README.md`, mention it in HARD-cases, register `verify-os.js`, and keep the start → stay → get-good story honest. Change `docs/PURPOSE.md` only if the mission itself changed.
