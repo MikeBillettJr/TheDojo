@@ -19,7 +19,7 @@ Not with more prompts. With a small, proven operating system you can actually ru
 
 ## What “start” means
 
-You clone this repo, copy templates, run the identity interview, and leave with a personalized agent — on Cursor, Claude Code, or any model that can read files. Windows or Mac. Same contracts.
+You clone this repo, copy templates, run the identity interview, and leave with a personalized agent — on Cursor, Claude Code, or any model that can read files. Windows, macOS, or Linux. Same contracts. Same `node` commands.
 
 **Done for day zero:** the AI is a better *personal* tool than it was an hour ago — because it has your profile, your rules, and your open loops. Not because the model got smarter.
 

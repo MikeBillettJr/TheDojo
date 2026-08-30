@@ -4,11 +4,12 @@ Clean conventions for a personal AI OS rooted in TheDojo.
 
 ```
 TheDojo/                          # Your OS repo (clone or fork)
-├── README.md                     # Overview + link to launch guide
-├── AGENTS.md                     # Agent constitution — adapt paths
+├── README.md                     # Human door: point an AI here
+├── AGENTS.md                     # Agent constitution — first visit + boot
 ├── docs/
+│   ├── WELCOME.md                # Founder story (enter-the-dojo prints this)
 │   ├── PURPOSE.md                # Why TheDojo exists (the gap)
-│   ├── LAUNCH.md                 # Day-zero onboarding (start here)
+│   ├── LAUNCH.md                 # Day-zero onboarding (after welcome)
 │   └── LAYOUT.md                 # This file
 ├── templates/memory/             # Starters — copy to memory/ once
 ├── memory/                       # Your live state (gitignore sensitive parts if needed)
@@ -28,13 +29,15 @@ TheDojo/                          # Your OS repo (clone or fork)
 │   ├── memory-loop/
 │   └── superninja/
 └── scripts/
-    └── verify-os.js              # Run all acceptance suites
+    ├── enter-the-dojo.js         # First visit (Windows / macOS / Linux)
+    └── verify-os.js              # All suites + enter check
 ```
 
 ## Rules
 
 | Path | Canonical? | Notes |
 |------|------------|-------|
+| `docs/WELCOME.md` | Yes (founder story) | Printed by `enter-the-dojo.js`; do not paraphrase |
 | `memory/` | Yes (for your OS) | Never store secrets; cap WORKING ~30 lines |
 | `templates/` | Starters only | Copy once; templates stay pristine in Git |
 | `skills/` | Yes | Contracts + optional scripts |
@@ -43,6 +46,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 
 ## Skill order
 
+0. `scripts/enter-the-dojo.js` — hear who built this, then wait
 1. `operator-profile` — identity
 2. `memory-loop` — continuity
 3. `superninja` — continuous improvement

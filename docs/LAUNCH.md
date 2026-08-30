@@ -2,9 +2,11 @@
 
 Everyone’s curious. This is **where to actually start** — then how to **get good**.
 
+If you are with an AI: say **Enter the dojo** first. The AI should run `node scripts/enter-the-dojo.js` (Windows, macOS, and Linux) and wait. Then come back here.
+
 Day zero → week one. Complete steps in order. If you only have an hour, finish Step 0 and Step 1. If you have a week, you will have a practice, not a demo.
 
-Full why: [PURPOSE.md](PURPOSE.md).
+Full why: [PURPOSE.md](PURPOSE.md). Founder story: [WELCOME.md](WELCOME.md).
 
 ## Prerequisites
 

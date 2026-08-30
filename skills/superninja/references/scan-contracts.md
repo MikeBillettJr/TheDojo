@@ -184,7 +184,7 @@ Binary checks (all must pass):
 1. MP-1 fixture dir → session-scan finding `MP-1` with `evidence.consecutive_count >= 6`
 2. no-tokens fixture dir → `token_status === "unavailable"` && `tokens === null`
 3. secrets fixture → stdout/card must not contain `sk-EXAMPLE_NOT_REAL` or `ghp_EXAMPLE_NOT_REAL`
-4. vault-fresh → `vault_kind === "fresh_or_empty"`, no `health_score` key, `sot` includes `OurDojo`
+4. vault-fresh → `vault_kind === "fresh_or_empty"`, no `health_score` key, `sot` includes `canonical`
 5. vault-sot-claim → finding pattern `QP-1`
 6. repo-mini → MP-13 WORKING finding with `line_count > 35`; QP-17 HARD id mismatch
 7. rendered card contains `recommend_only` and at least one `MP-` or `QP-` and does not contain `masterninja` or `health_score`

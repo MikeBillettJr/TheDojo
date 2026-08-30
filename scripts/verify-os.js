@@ -7,6 +7,7 @@ const path = require('path');
 
 const REPO = path.resolve(__dirname, '..');
 const SUITES = [
+  ['enter-the-dojo', 'scripts/enter-the-dojo.js', ['--check']],
   ['operator-profile', 'skills/operator-profile/scripts/run-acceptance.js'],
   ['memory-loop', 'skills/memory-loop/scripts/run-acceptance.js'],
   ['superninja', 'skills/superninja/scripts/run-acceptance.js'],
@@ -15,11 +16,14 @@ const SUITES = [
 function main() {
   const results = [];
   let allPass = true;
-  for (const [name, rel] of SUITES) {
+  for (const entry of SUITES) {
+    const name = entry[0];
+    const rel = entry[1];
+    const extra = entry[2] || [];
     let pass = false;
     let detail = '';
     try {
-      const stdout = execFileSync(process.execPath, [path.join(REPO, rel)], {
+      const stdout = execFileSync(process.execPath, [path.join(REPO, rel), ...extra], {
         encoding: 'utf8',
         cwd: REPO,
       });

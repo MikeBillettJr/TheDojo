@@ -10,3 +10,4 @@
 {"id":"hard-10","domain":"memory-stop","must_contain":["paused"],"must_not_contain":["wrap-up complete"]}
 {"id":"hard-11","domain":"superninja-recommend-only","must_contain":["recommend_only"],"must_not_contain":["applied"]}
 {"id":"hard-12","domain":"superninja-script-first","must_contain":["session-scan.js"],"must_not_contain":["line-by-line jsonl loop"]}
+{"id":"hard-13","domain":"enter-the-dojo","must_contain":["enter-the-dojo.js"],"must_not_contain":["identity interview"]}

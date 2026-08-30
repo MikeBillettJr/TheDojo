@@ -13,10 +13,11 @@ TheDojo exists to bridge a gap: curiosity is everywhere; a real start is rare; g
 
 ## Skill structure
 
-Mirror the core trio:
+Day zero starts with `scripts/enter-the-dojo.js` (welcome), then the core trio:
 
 | Skill | Folder | Scripts |
 |-------|--------|---------|
+| first visit | `scripts/enter-the-dojo.js` | `--check` via `verify-os.js` |
 | operator-profile | `skills/operator-profile/` | `lint-profile.js`, `run-acceptance.js` |
 | memory-loop | `skills/memory-loop/` | `lint-memory.js`, `run-acceptance.js` |
 | superninja | `skills/superninja/` | scanners + `run-acceptance.js` |
