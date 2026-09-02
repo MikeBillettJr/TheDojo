@@ -4,7 +4,7 @@ This skill is **host-agnostic**: markdown contract + Node scripts (no npm depend
 
 ## Cursor (recommended)
 
-1. Clone [TheDojo](https://github.com/BillettFamily/TheDojo) or copy `skills/superninja/` into your OS repo.
+1. Clone [TheDojo](https://github.com/MikeBillettJr/TheDojo) or copy `skills/superninja/` into your OS repo.
 2. Copy or symlink to `~/.cursor/skills/superninja/` (Windows: `%USERPROFILE%\.cursor\skills\superninja\`).
 3. Ensure your OS repo has `AGENTS.md`, `memory/optimization/*.md`, and `eval/cases/HARD-cases.md` (minimal set ships with TheDojo).
 4. Trigger: “run superninja” or “ninja card”.

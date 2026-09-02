@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "local-gmail": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["fake-gmail.js"],
+      "env": {
+        "GMAIL_MCP_CLIENT_ID": "example-client-id",
+        "GMAIL_MCP_CLIENT_SECRET": "sk-EXAMPLE_NOT_REAL"
+      }
+    },
+    "local-github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "fake-github"]
+    }
+  }
+}

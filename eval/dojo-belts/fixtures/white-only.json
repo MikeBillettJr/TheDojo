@@ -1,0 +1,9 @@
+{
+  "pass": false,
+  "results": [
+    { "suite": "enter-the-dojo", "pass": true },
+    { "suite": "operator-profile", "pass": false },
+    { "suite": "memory-loop", "pass": false },
+    { "suite": "superninja", "pass": false }
+  ]
+}

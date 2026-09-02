@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "results": [
+    { "suite": "enter-the-dojo", "pass": true },
+    { "suite": "operator-profile", "pass": true },
+    { "suite": "memory-loop", "pass": true },
+    { "suite": "inspect-os", "pass": true },
+    { "suite": "connector-map", "pass": true },
+    { "suite": "superninja", "pass": true },
+    { "suite": "career-loop", "pass": true },
+    { "suite": "factory-intake", "pass": true }
+  ]
+}

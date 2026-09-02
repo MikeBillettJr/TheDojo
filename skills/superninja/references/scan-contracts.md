@@ -25,7 +25,7 @@ node session-scan.js --root <dir> [--max-files N] [--max-lines N] [--out file]
 - Recurse for `**/agent-transcripts/**/*.jsonl` and also accept a directory of `.jsonl` (fixtures).
 - Cap files by `--max-files` (default 50, newest mtime first). Cap lines per file with `--max-lines`.
 - Parse each line as JSON. Skip malformed lines; count `lines_skipped`.
-- Tool calls: `message.content[]` where `type === "tool_use"` (same as `skills/job-pipeline/scripts/parse-transcript.js`).
+- Tool calls: `message.content[]` where `type === "tool_use"` (same shape as typical agent transcript parsers).
 
 Detections (per file, then aggregated):
 

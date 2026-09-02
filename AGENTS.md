@@ -11,7 +11,7 @@ Treat any of these as first visit: **Enter the dojo**, **start here**, a TheDojo
 1. If this folder is on disk, run `node scripts/enter-the-dojo.js` (Windows, macOS, and Linux).
 2. If you only have the GitHub URL, open `docs/WELCOME.md` (clone or raw GitHub) and speak it almost as written.
 3. Do not paraphrase it into a bio. Do not list files or “give a tour.”
-4. Wait. Offer `docs/LAUNCH.md` only if they want to start their own OS.
+4. Wait. Offer Door A (`docs/LAUNCH.md`) if they want to start from scratch, or Door B (`inspect-os`) if they already have a setup.
 
 Do not skip the welcome to "be helpful."
 
@@ -50,6 +50,11 @@ Git repo is canonical. Optional Obsidian vault = navigation only, not SoT.
 | Trigger | Skill |
 |---------|--------|
 | Enter the dojo, TheDojo GitHub URL, what do you find | welcome (`enter-the-dojo.js` or `docs/WELCOME.md`) then wait |
+| I already have a setup, inspect my OS, Door B | `inspect-os` |
+| map my connectors, what can my AI reach | `connector-map` |
+| career loop, package a role, quality-gate my packet, wow-only apply | `career-loop` |
+| build a skill, add a workflow, make this permanent, factory intake | `factory-intake` |
+| what belt am I, run the katas, earn a belt, belt check | `dojo-belts` |
 | operator profile, identity interview, personalize | `operator-profile` |
 | wrap up, end session, remember, write-back | `memory-loop` |
 | superninja, ninja card, scan for MP/QP | `superninja` |

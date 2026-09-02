@@ -12,14 +12,18 @@ Not with more prompts. With a small, proven operating system you can actually ru
 
 | What people feel | What they usually get | What TheDojo ships |
 |------------------|----------------------|--------------------|
+| Already have an OS | Another from-scratch tutorial | `inspect-os` — inventory + gap card; never overwrite |
 | Curious | Hype, tools, “just ask ChatGPT” | A first hour that produces *your* files |
 | Stuck at start | Blank chat, generic assistant | `operator-profile` — who you are, how it should work with you |
 | Restart every session | Lost context, repeating yourself | `memory-loop` — WORKING + wrap-up so session 2 continues |
 | Never get good | Random tips, no measurement | `superninja` — find waste, recommend one fix, prove it moved |
+| Job hunt with AI | Prompt resume packs / auto-apply bots | `career-loop` — wow-only packet, fail-closed gate, human approve |
+| Want to add a skill | Prompt dump / overwrite live files | `factory-intake` — spec before write; gate never writes `skills/` |
+| Want a score / AI IQ | Health scores and invented grades | `dojo-belts` — consecutive belts from passing tests |
 
 ## What “start” means
 
-You clone this repo, copy templates, run the identity interview, and leave with a personalized agent — on Cursor, Claude Code, or any model that can read files. Windows, macOS, or Linux. Same contracts. Same `node` commands.
+You clone this repo **or** you already have files. Door A: copy templates, run the identity interview. Door B: inspect what you have, never overwrite. Either way you leave with a clearer personal agent — on Cursor, Claude Code, or any model that can read files. Windows, macOS, or Linux. Same contracts. Same `node` commands.
 
 **Done for day zero:** the AI is a better *personal* tool than it was an hour ago — because it has your profile, your rules, and your open loops. Not because the model got smarter.
 
@@ -49,6 +53,6 @@ Before a skill lands here, it must answer:
 2. **How does using it make next week better?** (get good)
 3. **How do we prove it?** (`run-acceptance.js` or equivalent)
 
-If it only impresses people who already have an OS, it is not TheDojo yet — keep it in the private forge until it is portable and proven.
+If it cannot help someone **start** (Door A or Door B) or **get better**, it is not TheDojo yet — keep it in the private forge until it is portable and proven.
 
 See [LAUNCH.md](LAUNCH.md) to start. See [LAYOUT.md](LAYOUT.md) for how the repo stays clean as we add skills.

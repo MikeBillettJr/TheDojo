@@ -10,7 +10,12 @@ const SUITES = [
   ['enter-the-dojo', 'scripts/enter-the-dojo.js', ['--check']],
   ['operator-profile', 'skills/operator-profile/scripts/run-acceptance.js'],
   ['memory-loop', 'skills/memory-loop/scripts/run-acceptance.js'],
+  ['inspect-os', 'skills/inspect-os/scripts/run-acceptance.js'],
+  ['connector-map', 'skills/connector-map/scripts/run-acceptance.js'],
   ['superninja', 'skills/superninja/scripts/run-acceptance.js'],
+  ['career-loop', 'skills/career-loop/scripts/run-acceptance.js'],
+  ['factory-intake', 'skills/factory-intake/scripts/run-acceptance.js'],
+  ['dojo-belts', 'skills/dojo-belts/scripts/run-acceptance.js'],
 ];
 
 function main() {

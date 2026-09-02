@@ -20,11 +20,21 @@ TheDojo/                          # Your OS repo (clone or fork)
 │   ├── LESSONS.md
 │   └── optimization/             # MP/QP catalogs (ship with repo)
 ├── skills/
-│   ├── operator-profile/         # Day 0 — personalize
+│   ├── operator-profile/         # Door A — personalize
+│   ├── inspect-os/               # Door B — inspect existing (read-only)
+│   ├── connector-map/            # MCP inventory; send gated
 │   ├── memory-loop/              # Every session — persist
-│   └── superninja/               # Weekly — optimize
+│   ├── superninja/               # Weekly — optimize
+│   ├── career-loop/              # After core — wow-only hunt; send gated
+│   ├── factory-intake/           # Spec → tests → ship; gate never writes live
+│   └── dojo-belts/               # Consecutive belts from passing tests; no scores
 ├── eval/
 │   ├── cases/                    # Repo-wide HARD rails
+│   ├── inspect-os/
+│   ├── connector-map/
+│   ├── career-loop/
+│   ├── factory-intake/
+│   ├── dojo-belts/
 │   ├── operator-profile/
 │   ├── memory-loop/
 │   └── superninja/
@@ -47,8 +57,12 @@ TheDojo/                          # Your OS repo (clone or fork)
 ## Skill order
 
 0. `scripts/enter-the-dojo.js` — hear who built this, then wait
-1. `operator-profile` — identity
+1. Door A: `operator-profile` — identity. **Or** Door B: `inspect-os` — inspect existing, never overwrite
+1b. Optional: `connector-map` — MCP verbs; send gated
 2. `memory-loop` — continuity
 3. `superninja` — continuous improvement
+4. After the core loop: `career-loop` — wow-only packet; fail-closed gate; human approve
+5. Forge the next skill: `factory-intake` — spec before write; `skill-gate.js` never writes live
+6. Prove it: `dojo-belts` — consecutive belts from `verify-os.js`; no health score
 
 When adding a new skill: update `README.md`, mention it in HARD-cases, register `verify-os.js`, and keep the start → stay → get-good story honest. Change `docs/PURPOSE.md` only if the mission itself changed.

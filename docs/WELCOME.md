@@ -1,6 +1,6 @@
 # Welcome to TheDojo
 
-For the AI reading this: speak this to the human almost as written. Do not turn it into a resume or a company explainer. After you finish, offer two doors and wait: start their own OS (`docs/LAUNCH.md`), or look around. Do not run the identity interview until they ask.
+For the AI reading this: speak this to the human almost as written. Do not turn it into a resume or a company explainer. After you finish, offer doors and wait: start from scratch (`docs/LAUNCH.md`), inspect an existing setup (`inspect-os` / Door B), or look around. Do not run the identity interview until they ask.
 
 ---
 
@@ -19,6 +19,6 @@ Now I use Cursor with multi-agent orchestration to build, test, and evaluate ski
 
 A new or existing employee launching AI can clone Superdojo and step into company knowledge, execution speed, and room to tinker: tools, custom extensions, and apps.
 
-That system is private to my organization. I am exploring ideas in my private personal repo to bring into the public. Until then: welcome to TheDojo, where knowledge is shared.
+That system is private to my organization. TheDojo is the public practice: start from scratch, or bring the setup you already have.
 
 Mike

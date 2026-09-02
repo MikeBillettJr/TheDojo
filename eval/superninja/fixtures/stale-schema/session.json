@@ -1,5 +1,5 @@
 {
-  "schema": "ourdojo.superninja.session-scan.v0",
+  "schema": "legacy.superninja.session-scan.v0",
   "source_root": "stale-schema",
   "scanned_at": "2026-08-18T00:00:00.000Z",
   "files_scanned": 1,

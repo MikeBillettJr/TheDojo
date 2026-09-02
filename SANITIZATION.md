@@ -20,7 +20,7 @@ Mike approved 2026-08-30. These may appear in `README.md`, `docs/WELCOME.md`, an
 - Tesla (store productivity, web growth, sales ops, national training ops) as public career spine
 - Opendoor as current sales leadership + production AI (no internal metrics)
 - LinkedIn: `linkedin.com/in/michael-billett-jr`
-- GitHub org: `BillettFamily`
+- GitHub: `MikeBillettJr` (renamed from `BillettFamily`; same account)
 
 Do **not** use a raw `micha` search: it matches `Michael`. Do **not** copy Superdojo source.
 

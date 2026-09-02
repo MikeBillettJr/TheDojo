@@ -5,7 +5,7 @@
 **If you are a human:** copy this into any AI chat (Cursor, Claude, ChatGPT, etc.):
 
 ```text
-Open this GitHub repo: https://github.com/BillettFamily/TheDojo
+Open this GitHub repo: https://github.com/MikeBillettJr/TheDojo
 Go in the front door and tell me what you find.
 Don't give me a tour of the files. Then wait.
 ```
@@ -30,18 +30,18 @@ Even fewer know how to get good at it.
 
 Not prompt dumps. Contracts, memory files, and tests that run on any model that can read a folder.
 
-Maintainer: [Mike Billett Jr.](https://github.com/BillettFamily) ([LinkedIn](https://www.linkedin.com/in/michael-billett-jr))
+Maintainer: [Mike Billett Jr.](https://github.com/MikeBillettJr) ([LinkedIn](https://www.linkedin.com/in/michael-billett-jr))
 
 **[The welcome](docs/WELCOME.md)** · **[Why this exists](docs/PURPOSE.md)** · **[Start here](docs/LAUNCH.md)**
 
 ```bash
-git clone https://github.com/BillettFamily/TheDojo.git
+git clone https://github.com/MikeBillettJr/TheDojo.git
 cd TheDojo
 node scripts/enter-the-dojo.js
 node scripts/verify-os.js
 ```
 
-Then follow [docs/LAUNCH.md](docs/LAUNCH.md): copy templates, identity interview, wrap up every session, weekly improvement scan.
+Then follow [docs/LAUNCH.md](docs/LAUNCH.md): Door A (from scratch) or Door B (inspect an existing setup), then wrap up every session and scan weekly.
 
 ---
 
@@ -49,18 +49,28 @@ Then follow [docs/LAUNCH.md](docs/LAUNCH.md): copy templates, identity interview
 
 | Stage | Skill | What changes |
 |-------|--------|----------------|
-| **Start** | [operator-profile](skills/operator-profile/) | The model knows how *you* work |
+| **Start (Door A)** | [operator-profile](skills/operator-profile/) | The model knows how *you* work |
+| **Start (Door B)** | [inspect-os](skills/inspect-os/) | You already have an OS; inspect, do not overwrite |
+| **Connect** | [connector-map](skills/connector-map/) | Name what your AI can already reach; send stays gated |
 | **Stay** | [memory-loop](skills/memory-loop/) | Session 2 continues; it does not reboot |
 | **Get good** | [superninja](skills/superninja/) | You find waste, apply one fix, measure |
+| **Hunt** | [career-loop](skills/career-loop/) | Wow-only packet; fail-closed gate; human approve before send |
+| **Forge** | [factory-intake](skills/factory-intake/) | Spec before write; tests; then ship. Gate never writes live skills |
+| **Prove** | [dojo-belts](skills/dojo-belts/) | Katas pass or fail. Belts are consecutive. No health score |
 
-Personalize, persist, improve. Domain skills (email, resume, sales ops) come **after** this loop.
+Personalize, persist, improve. Then hunt with a packet you can defend. Forge the next skill the same way. Prove it with tests, not a score.
 
 Each skill has `PORTABLE.md` for Cursor, Claude Code, and plain chat.
 
 ```bash
 node skills/operator-profile/scripts/run-acceptance.js
 node skills/memory-loop/scripts/run-acceptance.js
+node skills/inspect-os/scripts/run-acceptance.js
+node skills/connector-map/scripts/run-acceptance.js
 node skills/superninja/scripts/run-acceptance.js
+node skills/career-loop/scripts/run-acceptance.js
+node skills/factory-intake/scripts/run-acceptance.js
+node skills/dojo-belts/scripts/run-acceptance.js
 node scripts/verify-os.js
 ```
 
@@ -77,7 +87,7 @@ TheDojo/
   docs/LAUNCH.md          <- day-zero onboarding
   templates/memory/       <- copy to memory/ on day 0
   memory/                 <- your live state (+ MP/QP catalogs)
-  skills/                 <- start / stay / get-good trio
+  skills/                 <- Door A/B + stay / get-good / hunt / forge / prove
   AGENTS.md               <- constitution for the agent
   eval/                   <- HARD cases + fixtures
   scripts/enter-the-dojo.js
