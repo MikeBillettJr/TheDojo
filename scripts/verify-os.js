@@ -16,6 +16,8 @@ const SUITES = [
   ['career-loop', 'skills/career-loop/scripts/run-acceptance.js'],
   ['factory-intake', 'skills/factory-intake/scripts/run-acceptance.js'],
   ['dojo-belts', 'skills/dojo-belts/scripts/run-acceptance.js'],
+  ['dojo-training', 'skills/dojo-training/scripts/run-acceptance.js'],
+  ['os-101', 'skills/os-101/scripts/run-acceptance.js'],
 ];
 
 function main() {

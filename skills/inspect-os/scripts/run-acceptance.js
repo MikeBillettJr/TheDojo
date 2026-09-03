@@ -65,7 +65,11 @@ function main() {
     blankProc.status === 0
       && blank.kind === 'blank_slate'
       && blank.recommend === 'door_a'
-      && blank.wrote === false,
+      && blank.wrote === false
+      && blank.training_invite
+      && blank.training_invite.invited === false
+      && Array.isArray(blank.training_invite.next)
+      && blank.training_invite.next.length === 0,
     JSON.stringify(blank)
   ));
 
@@ -87,7 +91,15 @@ function main() {
       && Array.isArray(good.found.skills)
       && good.found.skills.includes('demo-skill')
       && good.wrote === false
-      && good.recommend_only === true,
+      && good.recommend_only === true
+      && good.training_invite
+      && good.training_invite.invited === true
+      && good.training_invite.unlock === 'choice'
+      && good.training_invite.exam_required === true
+      && good.training_invite.belt_credit === false
+      && Array.isArray(good.training_invite.next)
+      && good.training_invite.next.includes('201')
+      && good.training_invite.next.includes('401'),
     JSON.stringify(good)
   ));
   checks.push(check('existing-good-no-write', beforeGood === afterGood, 'fixture bytes changed'));
@@ -95,11 +107,16 @@ function main() {
   const secretDir = path.join(FIX, 'existing-secret');
   const beforeSecret = fingerprint(secretDir);
   const secretProc = runInspect(secretDir);
+  const secret = parseReport(secretProc);
   const secretOut = `${secretProc.stdout || ''}\n${secretProc.stderr || ''}`;
   const afterSecret = fingerprint(secretDir);
   checks.push(check(
     'existing-secret-redacted',
-    secretProc.status === 0 && !secretOut.includes(TOKEN),
+    secretProc.status === 0
+      && !secretOut.includes(TOKEN)
+      && secret.training_invite
+      && Array.isArray(secret.training_invite.next)
+      && secret.training_invite.next[0] === '101',
     secretOut.slice(0, 400)
   ));
   checks.push(check('existing-secret-no-write', beforeSecret === afterSecret, 'secret fixture bytes changed'));
@@ -111,8 +128,9 @@ function main() {
       && /operator-profile/i.test(skill)
       && /(enter-the-dojo|WELCOME)/i.test(skill)
       && /never overwrite/i.test(skill)
-      && /recommend_only/i.test(skill),
-    'missing when-not / welcome / overwrite / recommend_only'
+      && /recommend_only/i.test(skill)
+      && /training_invite/i.test(skill),
+    'missing when-not / welcome / overwrite / recommend_only / training_invite'
   ));
 
   try {

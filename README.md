@@ -71,6 +71,8 @@ node skills/superninja/scripts/run-acceptance.js
 node skills/career-loop/scripts/run-acceptance.js
 node skills/factory-intake/scripts/run-acceptance.js
 node skills/dojo-belts/scripts/run-acceptance.js
+node skills/dojo-training/scripts/run-acceptance.js
+node skills/os-101/scripts/run-acceptance.js
 node scripts/verify-os.js
 ```
 

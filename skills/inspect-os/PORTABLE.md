@@ -23,5 +23,7 @@ Paste `SKILL.md`. Ask the human for the folder path. If you cannot run Node, lis
 ## Rules
 
 - Welcome / first visit still goes through `enter-the-dojo.js` or `docs/WELCOME.md`.
-- Blank folder → send them to Door A. Do not run the identity interview here.
+- Blank folder → send them to Door A. Do not run the identity interview here. Do not pitch school.
+- Existing folder → show `training_invite` from the same JSON. Wait. Unlock is choice, not a belt.
+- Copy `skills/dojo-training/` with this skill (inspect loads the invite script).
 - Never overwrite their PROFILE or skills. Merge plan is recommend-only until they name a write.

@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { invite } = require('../../dojo-training/scripts/invite-training.js');
 
 const SECRET_RE = /\b(sk-|ghp_|github_pat_|xox[baprs]-|BEGIN [A-Z ]+PRIVATE KEY)\S*/gi;
 const IGNORE = new Set(['.git', 'node_modules', '.gitkeep', '.DS_Store']);
@@ -132,6 +133,10 @@ function inspect(root) {
     });
   }
 
+  const trainingInvite = kind === 'blank_slate'
+    ? invite('cold')
+    : invite('door_b', root);
+
   return {
     kind,
     recommend: kind === 'blank_slate' ? 'door_a' : 'door_b',
@@ -143,6 +148,7 @@ function inspect(root) {
     },
     gaps,
     merge_plan: mergePlan,
+    training_invite: trainingInvite,
     wrote: false,
     recommend_only: true,
   };

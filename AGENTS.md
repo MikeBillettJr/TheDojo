@@ -11,7 +11,7 @@ Treat any of these as first visit: **Enter the dojo**, **start here**, a TheDojo
 1. If this folder is on disk, run `node scripts/enter-the-dojo.js` (Windows, macOS, and Linux).
 2. If you only have the GitHub URL, open `docs/WELCOME.md` (clone or raw GitHub) and speak it almost as written.
 3. Do not paraphrase it into a bio. Do not list files or “give a tour.”
-4. Wait. Offer Door A (`docs/LAUNCH.md`) if they want to start from scratch, or Door B (`inspect-os`) if they already have a setup.
+4. Wait. Offer Door A (`docs/LAUNCH.md`) if they want to start from scratch, or Door B (`inspect-os`) if they already have a setup. Do not dump a lesson catalog. Do not run training before they pick a door.
 
 Do not skip the welcome to "be helpful."
 
@@ -60,6 +60,8 @@ Git repo is canonical. Optional Obsidian vault = navigation only, not SoT.
 | superninja, ninja card, scan for MP/QP | `superninja` |
 
 **stop / pause / wait** ≠ wrap-up — halt current action; keep chat open.
+
+After Door A or Door B is Done, follow that skill: show the invite, wait. Do not list every lesson. Practiced files are not a belt.
 
 ## Write-back
 

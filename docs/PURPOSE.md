@@ -20,12 +20,13 @@ Not with more prompts. With a small, proven operating system you can actually ru
 | Job hunt with AI | Prompt resume packs / auto-apply bots | `career-loop` — wow-only packet, fail-closed gate, human approve |
 | Want to add a skill | Prompt dump / overwrite live files | `factory-intake` — spec before write; gate never writes `skills/` |
 | Want a score / AI IQ | Health scores and invented grades | `dojo-belts` — consecutive belts from passing tests |
+| Finished setup, still don’t know the pieces | A course catalog on day zero | After a door, invite the next practice — not a syllabus on the welcome mat |
 
 ## What “start” means
 
 You clone this repo **or** you already have files. Door A: copy templates, run the identity interview. Door B: inspect what you have, never overwrite. Either way you leave with a clearer personal agent — on Cursor, Claude Code, or any model that can read files. Windows, macOS, or Linux. Same contracts. Same `node` commands.
 
-**Done for day zero:** the AI is a better *personal* tool than it was an hour ago — because it has your profile, your rules, and your open loops. Not because the model got smarter.
+**Done for day zero:** the AI is a better *personal* tool than it was an hour ago — because it has your profile, your rules, and your open loops. Not because the model got smarter. Setup is not the same as knowing how the OS works. After a door, the agent invites the next practice.
 
 ## What “get good” means
 

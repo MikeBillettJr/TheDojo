@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "fixture-read": {
+      "command": "node",
+      "args": ["noop.js"],
+      "env": {
+        "FIXTURE_API_KEY": "use-host-secret-store"
+      }
+    }
+  }
+}

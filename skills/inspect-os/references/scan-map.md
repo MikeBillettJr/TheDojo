@@ -35,3 +35,5 @@ Missing evidence → gap + merge-plan line. Never overwrite a file that already 
 ## Output
 
 JSON only. No file bodies. Secret patterns in any string → `[REDACTED]`. `wrote` is always `false`.
+
+Existing setup → include `training_invite` from `dojo-training` (`--mode door_b`). Blank tree → `training_invite` is the cold card (`invited: false`). Never dump 101–501. `belt_credit` stays false.

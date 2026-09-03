@@ -27,7 +27,9 @@ TheDojo/                          # Your OS repo (clone or fork)
 │   ├── superninja/               # Weekly — optimize
 │   ├── career-loop/              # After core — wow-only hunt; send gated
 │   ├── factory-intake/           # Spec → tests → ship; gate never writes live
-│   └── dojo-belts/               # Consecutive belts from passing tests; no scores
+│   ├── dojo-belts/               # Consecutive belts from passing tests; no scores
+│   ├── dojo-training/            # After a door: invite next practice (not a catalog)
+│   └── os-101/                   # Invitation-only: name the pieces; don’t leak secrets
 ├── eval/
 │   ├── cases/                    # Repo-wide HARD rails
 │   ├── inspect-os/
@@ -35,6 +37,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 │   ├── career-loop/
 │   ├── factory-intake/
 │   ├── dojo-belts/
+│   ├── os-101/
 │   ├── operator-profile/
 │   ├── memory-loop/
 │   └── superninja/
@@ -57,7 +60,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 ## Skill order
 
 0. `scripts/enter-the-dojo.js` — hear who built this, then wait
-1. Door A: `operator-profile` — identity. **Or** Door B: `inspect-os` — inspect existing, never overwrite
+1. Door A: `operator-profile` — identity. **Or** Door B: `inspect-os` — inspect existing, never overwrite. Then invite next practice (`dojo-training`); do not dump a catalog.
 1b. Optional: `connector-map` — MCP verbs; send gated
 2. `memory-loop` — continuity
 3. `superninja` — continuous improvement

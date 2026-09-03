@@ -17,8 +17,8 @@ description: >-
 ## Intent / Done / Boundaries
 
 1. **Intent** — capture how the operator works so every future session starts personalized.
-2. **Done** — `memory/PROFILE.md`, `memory/agent-interface.md`, and `memory/non-negotiables.md` exist, pass `lint-profile.js`, operator approved the draft.
-3. **Boundaries** — draft first; no silent overwrite on CONFLICT; no secrets in Git memory; sensitive facts stay local notes only (never PROFILE).
+2. **Done** — `memory/PROFILE.md`, `memory/agent-interface.md`, and `memory/non-negotiables.md` exist, pass `lint-profile.js`, operator approved the draft, **and** the training invite was shown. Wait.
+3. **Boundaries** — draft first; no silent overwrite on CONFLICT; no secrets in Git memory; sensitive facts stay local notes only (never PROFILE). Do not dump a lesson catalog. Do not auto-run `os-101`.
 
 ## Procedure
 
@@ -29,14 +29,22 @@ description: >-
 5. After each turn, **draft** updates to the three memory files. Show diff summary; wait for approval before write.
 6. On CONFLICT (new answer contradicts PROFILE): surface both versions; do not pick a winner silently.
 7. After core deck: offer **continuous mode** — adaptive gap questions using the same draft → approve → write loop.
-8. Run `node skills/operator-profile/scripts/lint-profile.js --dir memory` before calling Done.
-9. Remind operator to run `memory-loop` at session end and `superninja` weekly once the OS is in use.
+8. Run `node skills/operator-profile/scripts/lint-profile.js --dir memory` before calling the files Done.
+9. Setup is not knowledge. **Always** run the Door A invite and wait:
+
+```bash
+node skills/dojo-training/scripts/after-door-a.js
+```
+
+Show `next` only. Do not dump a catalog. If they say yes, then load `os-101`.
+10. Remind operator to run `memory-loop` at session end and `superninja` weekly once the OS is in use.
 
 ## Progressive disclosure
 
 - Interview questions: `references/interview-deck.md`
 - File shapes: `templates/memory/*.md`
 - Host install: `PORTABLE.md`
+- After Done: `skills/dojo-training/scripts/after-door-a.js`
 
 ## Failures to refuse
 
@@ -44,6 +52,8 @@ description: >-
 - Silent PROFILE overwrite when operator did not approve
 - Inventing preferences the operator did not state
 - Treating interview output as canonical without lint pass
+- Calling Door A Done without showing the training invite
+- Dumping a lesson catalog
 
 ## Verify
 

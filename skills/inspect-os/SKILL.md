@@ -6,8 +6,8 @@ description: >-
   plan. Triggers: I already have a setup, inspect my OS, Door B, don't start
   from scratch, I already have Cursor or Claude memory. Do not use for first
   visit (enter-the-dojo / WELCOME), blank-slate identity interview
-  (operator-profile / LAUNCH), superninja, connector mapping, or career
-  packaging.
+  (operator-profile / LAUNCH), superninja, factory-intake, connector mapping,
+  or career packaging.
 ---
 
 # inspect-os (Door B)
@@ -17,13 +17,13 @@ description: >-
 **When not to use:**
 - First visit / **Enter the dojo** / TheDojo GitHub URL → `enter-the-dojo.js` or `docs/WELCOME.md`, then wait.
 - Truly blank tree → Door A: `docs/LAUNCH.md` + `operator-profile`. Do **not** run the identity interview under this skill.
-- Weekly MP/QP scan → `superninja`. New skill → `factory-intake`. MCP wiring → `connector-map`. Job hunt → `career-loop`. Belts → `dojo-belts`.
+- Weekly MP/QP scan → `superninja`. New skill → `factory-intake`. MCP wiring → `connector-map`. Job hunt → `career-loop`.
 
 ## Intent / Done / Boundaries
 
 1. **Intent** — see what they already have; show gaps vs TheDojo trio (operator-profile, memory-loop, superninja).
-2. **Done** — inventory JSON + gap card + recommend-only merge plan shown; operator picks named next writes.
-3. **Boundaries** — read-only. **Never overwrite** PROFILE, skills, or rules. Draft merge only. Secrets → `[REDACTED]` / omit.
+2. **Done** — inventory JSON + gap card + recommend-only merge plan + `training_invite` shown; operator picks named next writes **or** a named next lesson. Wait.
+3. **Boundaries** — read-only. **Never overwrite** PROFILE, skills, or rules. Draft merge only. Secrets → `[REDACTED]` / omit. Do not publish the operator’s private memory.
 
 ## Procedure
 
@@ -35,8 +35,8 @@ description: >-
 node skills/inspect-os/scripts/inspect-os.js --root <their-os-folder>
 ```
 
-4. Show the gap card (kind, found, gaps, merge_plan). `recommend_only` until they name a file + action.
-5. If `kind` is `blank_slate`, route to Door A (`LAUNCH.md` + `operator-profile`). Stop. No interview here.
+4. Show the gap card (kind, found, gaps, merge_plan) **and** `training_invite`. `recommend_only` until they name a file + action **or** pick a named next lesson. Do not dump 101–501. Do not auto-run `os-101`.
+5. If `kind` is `blank_slate`, `training_invite.invited` is false. Route to Door A (`LAUNCH.md` + `operator-profile`). Stop. No interview here. No school pitch.
 6. Do not write `memory/` or `skills/` unless they explicitly approve a **named** add that does not overwrite.
 
 Load `references/scan-map.md` only if you need the file list. Host install: `PORTABLE.md`.
@@ -50,6 +50,8 @@ Load `references/scan-map.md` only if you need the file list. Host install: `POR
 - Auto-applying the merge plan
 - Treating this as connector mapping or career packaging
 - Inventing files that the scanner did not find (`could_not_verify`)
+- Skipping `training_invite` on an existing setup
+- Awarding a belt because files look practiced (`belt_credit` is always false)
 
 ## Verify
 
