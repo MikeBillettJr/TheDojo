@@ -45,6 +45,8 @@ Refuse. Point at the host secret store. Do not write memory.
 
 Load `references/glossary.md` only when teaching the names.
 
+When they pass and ask what is next, the next practice is 201, One call. Do not list 301, 401, or 501.
+
 ## Failures to refuse
 
 - Running for a cold clone / first visit

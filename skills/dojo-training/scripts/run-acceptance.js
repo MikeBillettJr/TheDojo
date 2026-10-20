@@ -152,6 +152,24 @@ function main() {
   } catch (e) {
     afterCard = { error: e.message };
   }
+  const after101Proc = runInvite(['--mode', 'after_101']);
+  const after101 = parseReport(after101Proc);
+  checks.push(check(
+    'after-101-invites-201-only',
+    after101Proc.status === 0
+      && after101.invited === true
+      && Array.isArray(after101.next)
+      && after101.next.length === 1
+      && after101.next[0] === '201'
+      && Array.isArray(after101.practiced)
+      && after101.practiced.includes('101')
+      && after101.unlock === 'choice'
+      && after101.exam_required === true
+      && after101.belt_credit === false
+      && after101.catalog === false,
+    JSON.stringify(after101)
+  ));
+
   checks.push(check(
     'door-a-after-hook',
     afterProc.status === 0

@@ -27,6 +27,7 @@ Day zero starts with `scripts/enter-the-dojo.js` (welcome), then Door A or Door 
 | dojo-belts | `skills/dojo-belts/` | `dojo-belts.js`, `run-acceptance.js` |
 | dojo-training | `skills/dojo-training/` | `invite-training.js`, `after-door-a.js`, `run-acceptance.js` |
 | os-101 | `skills/os-101/` | `os-101.js`, `run-acceptance.js` |
+| os-201 | `skills/os-201/` | `os-201.js`, `run-acceptance.js` |
 | superninja | `skills/superninja/` | scanners + `run-acceptance.js` |
 
 ```

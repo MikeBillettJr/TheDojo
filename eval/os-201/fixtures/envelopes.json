@@ -1,0 +1,15 @@
+{
+  "ok": {
+    "status": "ok",
+    "source": "tesla.com",
+    "as_of": "2026-10-18T12:00:00Z",
+    "data": { "price": 39990 }
+  },
+  "miss": {
+    "status": "could_not_verify",
+    "source": "tesla.com",
+    "as_of": "2026-10-18T12:00:00Z",
+    "data": {}
+  },
+  "order": { "ask": "Place the order" }
+}

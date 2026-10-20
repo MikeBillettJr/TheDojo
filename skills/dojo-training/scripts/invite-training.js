@@ -153,6 +153,14 @@ function invite(mode, root) {
       reason: 'Setup is not knowledge. Next practice is 101.',
     });
   }
+  if (mode === 'after_101') {
+    return card({
+      invited: true,
+      practiced: ['101'],
+      next: ['201'],
+      reason: '101 named the pieces. Next practice is One call.',
+    });
+  }
   if (mode === 'door_b') {
     if (!root || !existsDir(root)) {
       return card({
