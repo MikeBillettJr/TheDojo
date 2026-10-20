@@ -46,7 +46,14 @@ node skills/dojo-training/scripts/invite-training.js --mode cold
 ```
 
 4. Show `practiced` as “files look practiced,” not “you earned this belt.” Show `next` only. Wait.
-5. If they pick a named next kata (example: 101), then load that skill. Do not auto-run.
+5. If they pick 101 and later pass it, run:
+
+```bash
+node skills/dojo-training/scripts/invite-training.js --mode after_101
+```
+
+Show 201 only. Wait. Do not list 301, 401, or 501.
+6. If they pick a named next kata (example: 101 or 201), then load that skill. Do not auto-run.
 
 Load `references/invite-map.md` only if the mapping is unclear.
 

@@ -51,6 +51,7 @@ Then follow [docs/LAUNCH.md](docs/LAUNCH.md): Door A (from scratch) or Door B (i
 |-------|--------|----------------|
 | **Start (Door A)** | [operator-profile](skills/operator-profile/) | The model knows how *you* work |
 | **Start (Door B)** | [inspect-os](skills/inspect-os/) | You already have an OS; inspect, do not overwrite |
+| **One call** | [os-201](skills/os-201/) | After 101. One tool call beats a guess. A pass tells you to clone two folders and run the Tesla tool on your computer |
 | **Connect** | [connector-map](skills/connector-map/) | Name what your AI can already reach; send stays gated |
 | **Stay** | [memory-loop](skills/memory-loop/) | Session 2 continues; it does not reboot |
 | **Get good** | [superninja](skills/superninja/) | You find waste, apply one fix, measure |
@@ -73,6 +74,7 @@ node skills/factory-intake/scripts/run-acceptance.js
 node skills/dojo-belts/scripts/run-acceptance.js
 node skills/dojo-training/scripts/run-acceptance.js
 node skills/os-101/scripts/run-acceptance.js
+node skills/os-201/scripts/run-acceptance.js
 node scripts/verify-os.js
 ```
 
