@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * os-201 One call. Read status, then the fact. Refuse pay, checkout, and apply.
- * Never writes. The Tesla tool is cloned and run on the learner's computer.
+ * Never writes. The next tool runs on the learner's computer.
+ * This repo names placeholder folders only.
  *
  *   node os-201.js --mode exam
  */
@@ -32,13 +33,6 @@ function findRepo(start) {
 
 function redact(text) {
   return String(text).replace(SECRET_RE, '[REDACTED]');
-}
-
-function toolPresent(repo) {
-  if (!repo) return false;
-  const tool = path.join(repo, 'tools', 'tesla-mcp', 'tesla_mcp', 'server.py');
-  const kit = path.join(repo, 'tools', 'mcp-kit', 'mcp_kit', 'envelope.py');
-  return fs.existsSync(tool) && fs.existsSync(kit);
 }
 
 function loadFixtures(repo) {
@@ -93,23 +87,20 @@ function grade(fixtures) {
   };
 }
 
-function cardLines(present) {
-  const lines = [
+function cardLines() {
+  return [
     'You passed One call.',
-    'Tesla is a tool you run on your own computer.',
-    'Clone two folders from this repo: the Tesla tool and the shared kit beside it.',
-    'The folders are tools/tesla-mcp and tools/mcp-kit.',
+    'Run the next tool on your own computer.',
+    'Clone two folders you choose. This public repo does not name a private tool.',
+    'The placeholders are tools/<your-tool> and tools/<your-kit>.',
     'Point your AI host at the local command.',
-    'It reads public tesla.com from your machine.',
-    'It can answer a page, cars near a ZIP you type, a charger, and a cash build.',
+    'It reads a public page from your machine. One example is tesla.com.',
+    'It can answer a page you can cite.',
     'It stops before pay, checkout, and apply.',
     'It does not sign you in, and it does not open a browser when a session starts.',
     'TheDojo does not run this for you.',
+    'Those two folders are not in this repo. Add your own on your computer.',
   ];
-  if (!present) {
-    lines.push('Those two folders are not in this repo yet. The clone waits until they are.');
-  }
-  return lines;
 }
 
 function reportFor(mode) {
@@ -151,7 +142,6 @@ function reportFor(mode) {
     });
   }
   const graded = grade(fixtures);
-  const present = toolPresent(repo);
   const out = Object.assign(base, {
     mode: 'exam',
     pass: graded.pass,
@@ -160,12 +150,12 @@ function reportFor(mode) {
       miss: graded.miss,
       order: graded.order,
     },
-    tool_present: present,
-    clone: ['tools/tesla-mcp', 'tools/mcp-kit'],
+    tool_present: false,
+    clone: ['tools/<your-tool>', 'tools/<your-kit>'],
   });
   if (graded.pass) {
     out.unlock = 'tesla';
-    out.card = cardLines(present);
+    out.card = cardLines();
   }
   return out;
 }
