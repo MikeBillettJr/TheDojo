@@ -63,6 +63,23 @@ function parseReport(proc) {
   }
 }
 
+const PLACEHOLDER_FOLDERS = ['tools/<your-tool>', 'tools/<your-kit>'];
+
+function foreignToolPaths(text) {
+  const hits = [];
+  const slashed = text.match(/tools\/[A-Za-z0-9_<>./-]+/g) || [];
+  for (const hit of slashed) {
+    const cleaned = hit.replace(/\.+$/, '');
+    if (!PLACEHOLDER_FOLDERS.includes(cleaned)) hits.push(cleaned);
+  }
+  const joined = text.matchAll(/['"]tools['"]\s*,\s*['"]([^'"]+)['"]/g);
+  for (const match of joined) {
+    const folder = `tools/${match[1]}`;
+    if (!PLACEHOLDER_FOLDERS.includes(folder)) hits.push(folder);
+  }
+  return hits;
+}
+
 function main() {
   const checks = [];
   const before = fingerprint(FIX);
@@ -94,14 +111,16 @@ function main() {
     'card-local-two-folders',
     card.includes('your own computer')
       && card.includes('two folders')
-      && card.includes('tools/tesla-mcp')
-      && card.includes('tools/mcp-kit')
+      && card.includes('tools/<your-tool>')
+      && card.includes('tools/<your-kit>')
       && card.includes('TheDojo does not run this for you.')
-      && card.includes('not in this repo yet')
+      && card.includes('not in this repo')
       && !/server/i.test(card)
       && exam.tool_present === false
       && Array.isArray(exam.clone)
-      && exam.clone.length === 2,
+      && exam.clone.length === 2
+      && exam.clone[0] === 'tools/<your-tool>'
+      && exam.clone[1] === 'tools/<your-kit>',
     card
   ));
   checks.push(check('exam-no-write', before === after, 'fixture bytes changed'));
@@ -124,15 +143,29 @@ function main() {
   ));
 
   const skill = fs.readFileSync(SKILL, 'utf8');
+  const portable = fs.readFileSync(path.join(HERE, '..', 'PORTABLE.md'), 'utf8');
+  const scriptSource = fs.readFileSync(SCRIPT, 'utf8');
+  const launch = fs.readFileSync(path.join(REPO, 'docs', 'LAUNCH.md'), 'utf8');
+  const readme = fs.readFileSync(path.join(REPO, 'README.md'), 'utf8');
+  const layout = fs.readFileSync(path.join(REPO, 'docs', 'LAYOUT.md'), 'utf8');
+  const publicText = [out, skill, portable, scriptSource, launch, readme, layout].join('\n');
+  const foreign = foreignToolPaths(publicText);
+  checks.push(check(
+    'no-foreign-tool-path',
+    foreign.length === 0,
+    foreign.join(', ') || 'placeholder folders only'
+  ));
   checks.push(check(
     'skill-after-101',
     /When not to use/i.test(skill)
       && /101/.test(skill)
       && /first visit/i.test(skill)
-      && /two folders/i.test(skill)
+      && /placeholder folders/i.test(skill)
       && /own computer/i.test(skill)
-      && /belt/i.test(skill),
-    'missing when-not / 101 / local clone'
+      && /belt/i.test(skill)
+      && /tools\/<your-tool>/.test(skill)
+      && /tools\/<your-kit>/.test(portable),
+    'missing when-not / 101 / placeholder folders'
   ));
 
   const pass = checks.every((c) => c.pass);

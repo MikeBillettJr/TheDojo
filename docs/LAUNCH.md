@@ -95,7 +95,7 @@ After 101 (name the pieces), the next practice is One call:
 node skills/os-201/scripts/os-201.js --mode exam
 ```
 
-A pass does not award a belt. The card tells you to clone two folders onto your own computer, `tools/tesla-mcp` and `tools/mcp-kit`, and run the Tesla tool there. TheDojo does not run it for you. If those folders are not in the repo yet, the clone waits.
+A pass does not award a belt. The card tells you to run a tool on your own computer. It names two placeholder folders, `tools/<your-tool>` and `tools/<your-kit>`. This public repo does not ship a private tool path. TheDojo does not run it for you.
 
 ## Step 2 — Persist (`memory-loop`)
 

@@ -16,6 +16,7 @@ node skills/os-201/scripts/os-201.js --mode exam
 
 - Do not run on first visit.
 - A pass does not award a belt.
-- The card tells them to clone two folders onto their own computer: `tools/tesla-mcp` and `tools/mcp-kit`.
+- The card tells them to use two placeholder folders on their own computer: `tools/<your-tool>` and `tools/<your-kit>`.
+- This public repo does not ship a private tool path. Read a public page, such as `tesla.com`.
 - TheDojo does not run the tool for them.
-- Do not copy those folders during the lesson.
+- Do not copy a private tool into this repo during the lesson.

@@ -30,7 +30,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 │   ├── dojo-belts/               # Consecutive belts from passing tests; no scores
 │   ├── dojo-training/            # After a door: invite next practice (not a catalog)
 │   ├── os-101/                   # Invitation-only: name the pieces; don’t leak secrets
-│   └── os-201/                   # After 101: one call; Tesla tool is a local two-folder clone
+│   └── os-201/                   # After 101: one call; local tool uses placeholder folders
 ├── eval/
 │   ├── cases/                    # Repo-wide HARD rails
 │   ├── inspect-os/
@@ -62,7 +62,7 @@ TheDojo/                          # Your OS repo (clone or fork)
 
 0. `scripts/enter-the-dojo.js` — hear who built this, then wait
 1. Door A: `operator-profile` — identity. **Or** Door B: `inspect-os` — inspect existing, never overwrite. Then invite next practice (`dojo-training`); do not dump a catalog.
-1b. After 101: `os-201` — one call. A pass offers the Tesla tool as a local clone of two folders. TheDojo does not run it.
+1b. After 101: `os-201` — one call. A pass offers a local tool on your computer, using placeholder folders. TheDojo does not run it.
 1c. Optional: `connector-map` — what is already installed; send gated
 2. `memory-loop` — continuity
 3. `superninja` — continuous improvement

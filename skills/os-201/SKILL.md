@@ -2,9 +2,10 @@
 name: os-201
 description: >-
   Invitation-only kata after os-101: one tool call beats a guess. Read status,
-  then the fact. Refuse pay, checkout, and apply. A pass unlocks the Tesla
-  tool as a local clone of two folders. Triggers: invited 201, One call, next
-  practice after 101. Do not use on first visit, before 101, or to copy a tool.
+  then the fact. Refuse pay, checkout, and apply. A pass points at a local
+  tool on their own computer, using placeholder folders only. Triggers:
+  invited 201, One call, next practice after 101. Do not use on first visit,
+  before 101, or to copy a private tool path.
 ---
 
 # os-201 — One call
@@ -14,13 +15,13 @@ description: >-
 **When not to use:**
 - First visit / Enter the dojo / look around
 - Before 101
-- Copying the Tesla tool into place (the pass card tells them to clone two folders onto their own computer when those folders exist)
+- Copying a private tool into this repo (the pass card names placeholder folders on their own computer)
 - Awarding a belt for a pass
 
 ## Intent / Done / Boundaries
 
 1. **Intent** — the operator can say why one tool call beats a guess, and can read an envelope.
-2. **Done** — exam JSON `pass: true`, `unlock: tesla`, `hosted: false`, `wrote: false`, `belt_credit: false`. The card names two folders and their own computer.
+2. **Done** — exam JSON `pass: true`, `unlock: tesla`, `hosted: false`, `wrote: false`, `belt_credit: false`. The card names two placeholder folders and their own computer.
 3. **Boundaries** — fixture only. No live site. No browser. TheDojo does not run the tool for them.
 
 ## Procedure
@@ -33,7 +34,7 @@ description: >-
 node skills/os-201/scripts/os-201.js --mode exam
 ```
 
-4. Show `card` when `pass` is true. `install` stays `choice`. They clone `tools/tesla-mcp` and `tools/mcp-kit` onto their own computer and point their AI host at the local command. If `tool_present` is false, say the clone waits.
+4. Show `card` when `pass` is true. `install` stays `choice`. They use the placeholders `tools/<your-tool>` and `tools/<your-kit>` on their own computer and point their AI host at the local command. `tool_present` stays false. This public repo does not ship a private tool path. Read a public page (the exam fixture uses `tesla.com`). Do not name a private tool folder.
 5. “Place the order” stays refused. Do not unlock on that path:
 
 ```bash
@@ -55,7 +56,7 @@ node skills/os-201/scripts/os-201.js --mode order
 - Saying TheDojo runs the tool for them
 - Calling the tool a server in the card
 - Writing memory or awarding a belt
-- Copying the tool folders in this step
+- Copying a private tool path into this repo
 
 ## Verify
 
